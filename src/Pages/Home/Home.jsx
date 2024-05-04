@@ -1,9 +1,11 @@
 import React from "react";
-
+import Header from "../../Header/Header";
+import ExploreMenu from "../../Components/ExploreMenu/ExploreMenu";
 const Home = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <Header />
+      <ExploreMenu />
     </div>
   );
 };
