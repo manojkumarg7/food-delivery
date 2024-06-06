@@ -7,17 +7,21 @@ import { Routes, Route } from "react-router-dom";
 import Cart from "./Pages/Cart/Cart";
 import PlaceOrder from "./Pages/PLaceOrder/PlaceOrder";
 import Home from "./Pages/Home/Home";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
-    <div className="app">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/order" element={<PlaceOrder />} />
-      </Routes>
-    </div>
+    <>
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/order" element={<PlaceOrder />} />
+        </Routes>
+      </div>
+      <Footer />
+    </>
   );
 }
 
