@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import "./Cart.css";
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+    useContext(StoreContext);
 
   return (
     <div className="cart">
@@ -40,19 +41,21 @@ const Cart = () => {
       <div className="cart-bottom">
         <div className="cart-total">
           <h2>Cart Total</h2>
-          <div className="cart-totao-details">
-            <p>Subtotal</p>
-            <p>{0}</p>
+          <div>
+            <div className="cart-totao-details">
+              <p>Subtotal</p>
+              <p>${getTotalCartAmount()}</p>
+            </div>
             <hr />
-          </div>
-          <div className="cart-totao-details">
-            <p>Delivery Fee</p>
-            <p>{2}</p>
+            <div className="cart-totao-details">
+              <p>Delivery Fee</p>
+              <p>${2}</p>
+            </div>
             <hr />
-          </div>
-          <div className="cart-totao-details">
-            <b>Total</b>
-            <b>{0}</b>
+            <div className="cart-totao-details">
+              <b>Total</b>
+              <b>${getTotalCartAmount() + 2}</b>
+            </div>
           </div>
           <button>Proceed To Checkout</button>
         </div>
@@ -61,13 +64,14 @@ const Cart = () => {
             <p>If you have promo code enter here</p>
             <div className="cart-promocode-input">
               <input type="text" placeholder="promocode" />
-              <button>submit</button>
+              <button>Submit</button>
             </div>
           </div>
-        </div>{" "}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Cart;
+// 3.08

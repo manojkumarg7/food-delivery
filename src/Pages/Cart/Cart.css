@@ -14,17 +14,16 @@
   margin: 10px 0px;
   color: black;
 }
-
 .cart-items-item img {
   width: 50px;
 }
-
 .cart hr {
   height: 1px;
   background-color: #e2e2e2;
+  border: none;
 }
 
-.cross {
+.cart-items-item .cross {
   cursor: pointer;
 }
 
@@ -34,7 +33,6 @@
   justify-content: space-between;
   gap: max(12vw, 20px);
 }
-
 .cart-total {
   flex: 1;
   display: flex;
@@ -42,7 +40,7 @@
   gap: 20px;
 }
 
-.cart-total-details {
+.cart-totao-details {
   display: flex;
   justify-content: space-between;
   color-scheme: #555;
@@ -51,7 +49,7 @@
 .cart-total hr {
   margin: 10px 0px;
 }
-/* 2.57 */
+
 .cart-total button {
   border: none;
   color: white;
@@ -92,5 +90,14 @@
   background-color: black;
   border: none;
   border-radius: 4px;
-  color:white;
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .cart-bottom {
+    flex-direction: column-reverse;
+  }
+  .cart-promocode {
+    justify-content: start;
+  }
 }
